@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Home() {
   let a = 'Test row'
-  if (a = 'bad check') {
+  if (a == 'bad check') {
     let b = 0
     if (b = 0) {
       let c = 'bad code'
@@ -15,12 +15,32 @@ export default function Home() {
       c = 'bad code too'
     }
   }
+
+  type User = {
+    name: string;
+    lastName: string;
+    age: number;
+  }
+
+  function print(user: User): void {
+    console.log(`${user.name} ${user.lastName} (${user.age})`);
+  }
+  print({ name: 'Zuser', lastName: 'Zasr', age: 21 })
+
+  let name = 'Zuer Zasr';
+
+  function toBase64() {
+    name = btoa(name);
+  }
+
+  toBase64();
+
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
       <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
         <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
           {c == 'bad code too' ? 'dont use this code' : 'go away'}&nbsp;
-          <code className="font-mono font-bold">app/page.tsx</code>
+          <code className="font-mono font-bold">{name}</code>
         </p>
         <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:size-auto lg:bg-none">
           <a
