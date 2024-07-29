@@ -5,8 +5,7 @@ export default function Home() {
   let c = 'not good'
   if (a == 'bad check') {
     c = 'bad code'
-  }
-  if (a != 'bad check') {
+  } else if (a != 'bad check') {
     c = 'bad code too'
   }
 
