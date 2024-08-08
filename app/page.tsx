@@ -23,7 +23,7 @@ export default function Home() {
   let name = 'Zuer Zasr';
 
   function toBase64() {
-    name = btoa(name);
+            name = btoa(name);
   }
 
   toBase64();
