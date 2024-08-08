@@ -12,28 +12,28 @@ build:
 
     steps:
     - name: Checkout code
-        uses: actions/checkout@v4
+      uses: actions/checkout@v4
 
     - name: Set up Node.js
-        uses: actions/setup-node@v2
-        with:
-        node-version: '20'
+      uses: actions/setup-node@v2
+      with:
+      node-version: '20'
 
     - name: Install dependencies
-        run: npm install
+      run: npm install
 
     - name: Run ESLint
-        run: npm run lint
-        continue-on-error: true
+      run: npm run lint
+      continue-on-error: true
 
     - name: Run Prettier
-        run: npm run format
-        continue-on-error: true
+      run: npm run format
+      continue-on-error: true
 
     - name: Check for lint errors
-        if: failure()
-        run: exit 1
+      if: failure()
+      run: exit 1
 
     - name: Check for Prettier errors
-        if: failure()
-        run: exit 1
+      if: failure()
+      run: exit 1
