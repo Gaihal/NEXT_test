@@ -20,10 +20,10 @@ export default function Home() {
   }
   print({ name: 'Zuser', lastName: 'Zasr', age: 21 })
 
-  let name = 'Zuer Zasr';
+      let name = 'Zuer Zasr';
 
   function toBase64() {
-    name = btoa(name);
+    name = btoa(name);  
   }
 
   toBase64();
